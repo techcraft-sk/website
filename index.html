@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Under Reconstruction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #0b0e11;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: #e0e0e0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        /* BACKGROUND LAYER */
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    17deg,
+                    rgba(255,255,255,0.03),
+                    rgba(255,255,255,0.03) 1px,
+                    transparent 1px,
+                    transparent 140px
+                ),
+                repeating-linear-gradient(
+                    -23deg,
+                    rgba(255,255,255,0.02),
+                    rgba(255,255,255,0.02) 1px,
+                    transparent 1px,
+                    transparent 180px
+                );
+            opacity: 0.5;
+        }
+
+        .bg::after {
+            content:
+                "Q1 NPN OPAMP LM358 DFF CLK RST Vref GND +5V "
+                "uint32_t isr(void){ADC_Read();PWM_Update();} "
+                "MOSFET GATE DRAIN SOURCE SPI I2C UART RX TX "
+                "typedef struct{float kp;float ki;float kd;} pid_t; "
+                "while(1){process();}";
+            position: absolute;
+            inset: 0;
+            font-family: "Courier New", monospace;
+            font-size: 12px;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.05);
+            white-space: pre-wrap;
+            padding: 80px;
+        }
+
+        /* CONTENT */
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .box {
+            max-width: 520px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: 0.6px;
+        }
+
+        p {
+            font-size: 15px;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .line {
+            width: 80px;
+            height: 1px;
+            background: rgba(255,255,255,0.3);
+            margin: 24px auto;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 26px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 6px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 14px;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            opacity: 0.35;
+            letter-spacing: 0.6px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg"></div>
+
+    <div class="content">
+        <div class="box">
+            <h1>Website under reconstruction</h1>
+            <p>
+                Technical work and internal updates are in progress.<br>
+                Information will be available soon.
+            </p>
+
+            <div class="line"></div>
+
+            <a href="https://www.instagram.com/tech_craft_sk" target="_blank">
+                Instagram
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        Mechatronics · MotionControl · Telecom · PowerElectronics · CameraStabilization · WirelessTech · PCBDesign · Prototyping
+    </footer>
+
+</body>
+</html>
